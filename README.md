@@ -7,9 +7,7 @@ This repository contains a collection of solved problems and implementations rel
 - [Introduction](#introduction)
 - [Technologies Used](#technologies-used)
 - [Topics Covered](#topics-covered)
-- [Directory Structure](#directory-structure)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 
@@ -32,7 +30,6 @@ This repository serves as a practice ground for various data structures and algo
 
 3. **Recursion**:
    - Understanding recursion concepts
-   - Solving recursive problems
 
 4. **Sorting Algorithms**:
    - Bubble Sort
@@ -45,7 +42,4 @@ This repository serves as a practice ground for various data structures and algo
    - Linear Search
    - Binary Search
 
-
-
-## Directory Structure
 
