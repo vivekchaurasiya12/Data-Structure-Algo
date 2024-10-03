@@ -1,0 +1,1 @@
+ sort(temp.begin(),temp.end());
