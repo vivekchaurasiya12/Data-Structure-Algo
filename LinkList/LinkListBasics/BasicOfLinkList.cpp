@@ -22,7 +22,7 @@ struct Node {
 };
 
 // Function to convert an array into a linked list
-Node* converArrayToLinklist(vector<int> &arr) {
+Node* convertArrayToLinklist(vector<int> &arr) {
     // Initialize head of the linked list with the first element of the array
     Node* head = new Node(arr[0]);  
     Node* mover = head;  // Pointer to traverse the linked list
@@ -72,7 +72,7 @@ int main() {
     cout << y->data << endl;  // Print the data of the node (3)
     
     // Convert the array into a linked list and store the head
-    Node* head = converArrayToLinklist(arr);
+    Node* head = convertArrayToLinklist(arr);
     
     // Traverse the linked list and print the data of each node
     Node* temp = head;
