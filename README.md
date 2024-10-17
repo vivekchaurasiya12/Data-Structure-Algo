@@ -42,4 +42,8 @@ This repository serves as a practice ground for various data structures and algo
    - Linear Search
    - Binary Search
 
+6. **LinkList Implementation**:
+   - Singly LinkList (Insertion,deletion)
+   - Doubly Linklist (Insertion,deletion)
+
 
