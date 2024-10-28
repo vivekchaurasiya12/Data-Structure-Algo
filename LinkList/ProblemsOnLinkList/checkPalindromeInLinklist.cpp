@@ -43,24 +43,53 @@ void display(Node* head) {
         temp = temp->next;         // Move to the next node
     }
 }
-bool checkPalindrome(Node* head){
-     Node* temp = head;
-     stack<int> st;
-     while(temp!=NULL){
-        st.push(temp->data);
-        temp= temp->next;
-     }
-     temp = head;
-     while(temp!=NULL){
-        if(temp->data != st.top()){
-             return false;
-        }
-        temp = temp->next;
-        st.pop();
-     }
-     return true;
+// Function to reverse a linked list from a given head node
+Node* reverseLinklist(Node* head) {
+    Node* temp = head;      // Initialize temp to traverse the list
+    Node* prev = NULL;      // Previous pointer for reversing links
+
+    // Traverse the linked list and reverse pointers
+    while (temp != NULL) {
+        Node* front = temp->next; // Save the next node
+        temp->next = prev;        // Reverse the link
+        prev = temp;              // Move prev to the current node
+        temp = front;             // Move temp to the next node
+    }
+    return prev; // Return the new head of the reversed list
 }
 
+// Function to check if a linked list is a palindrome
+bool checkPalindrome(Node* head) {
+    Node* fast = head;   // Fast pointer moves two steps at a time
+    Node* slow = head;   // Slow pointer moves one step at a time
+
+    // Find the middle of the list (slow will be at the midpoint)
+    while (fast->next != NULL && fast->next->next != NULL) {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+
+    // Reverse the second half of the list starting from slow->next
+    Node* newHead = reverseLinklist(slow->next);
+
+    // Initialize pointers to compare both halves
+    Node* first = head;
+    Node* second = newHead;
+
+    // Compare the first half with the reversed second half
+    while (second != NULL) {
+        if (first->data != second->data) { // Mismatch found
+            reverseLinklist(newHead); // Restore the list's original order
+            return false; // List is not a palindrome
+        }
+        first = first->next;  // Move to the next node in the first half
+        second = second->next; // Move to the next node in the second half
+    }
+
+    // Restore the original order of the second half
+    reverseLinklist(newHead);
+    return true; // List is a palindrome
+}
 
 // Main function
 int main() {
