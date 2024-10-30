@@ -51,7 +51,7 @@ void display(Node* head) {
 
 // Function to find the starting point of the loop in the linked list
 Node* startingPointInLoop(Node* head) {
-    if(head==NULL && head->next==NULL) return NULL;
+    if(head == NULL && head->next==NULL) return NULL;
     Node* slow = head;
     Node* fast = head;
 
