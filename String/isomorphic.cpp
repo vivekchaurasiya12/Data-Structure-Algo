@@ -4,6 +4,7 @@ using namespace std;
 int MAX_CHAR = 256;  // Defines the number of distinct ASCII characters
 
 // OPTIMIZED APPROACH WITH TIME COMPLEXITY O(N) AND SPACE COMPLEXITY O(1)
+
 bool isIsomorphic(string s1, string s2) {
     if (s1.length() != s2.length()) return false;  // If lengths differ, they can't be isomorphic
 
@@ -40,7 +41,7 @@ bool isIsomorphic(string &s1, string &s2) {
 
     unordered_map<char, int> m1, m2;  // Maps to store first occurrence indices
     for (int i = 0; i < s1.length(); ++i) {
-        // If character not seen before, store its first occurrence index
+         If character not seen before, store its first occurrence index
         if (m1.find(s1[i]) == m1.end()) {
             m1[s1[i]] = i;
         }
@@ -48,7 +49,7 @@ bool isIsomorphic(string &s1, string &s2) {
             m2[s2[i]] = i;
         }
 
-        // Check if the first occurrence indices match
+         Check if the first occurrence indices match
         if (m1[s1[i]] != m2[s2[i]]) {
             return false;
         }
