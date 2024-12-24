@@ -1,4 +1,4 @@
-#include<bits/stdc++.h> // Includes all standard headers in C++ (not recommended for production, use specific headers instead)
+#include<bits/stdc++.h> 
 using namespace std;
 
 // Structure definition for a tree node
