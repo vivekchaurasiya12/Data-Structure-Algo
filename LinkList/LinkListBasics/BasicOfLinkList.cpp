@@ -8,6 +8,7 @@ struct Node {
 
     // Constructor 1: Initializes node with data and pointer to the next node
     public:
+    
     Node(int data1, Node* next1) {
         data = data1;
         next = next1;
